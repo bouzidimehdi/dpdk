@@ -1,0 +1,93 @@
+$font: Montserrat, sans-serif;
+$primary-color: #76d2c7;
+$secondary-color: #6bddb4;
+$text_onhover: #f0f0f0;
+
+body {
+    font-family: $font;
+}
+
+.wrapper {
+    padding: 40px 30px;
+    margin: 10px;
+    border-radius: 1px;
+    background-size: 200% 200%;
+    padding-bottom: 60px;
+    background-image: 
+    linear-gradient(to top, $primary-color 50%, transparent 50%);
+    -webkit-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    -moz-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    -ms-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    -o-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper:hover {
+    background-image: 
+    linear-gradient(to top, $primary-color 20%, $secondary-color 50% , transparent 50%);
+    -webkit-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    -moz-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    -ms-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    -o-transition: background-position 300ms, color 300ms ease, border-color 300ms ease;
+    transition: background-position 300ms, color 300ms ease-in-out, border-color 300ms ease;
+    background-position: 0 100%;
+    .arrow_right {
+        stroke: $text_onhover;
+    }
+    color: $text_onhover;
+    cursor: pointer;
+}
+
+.title {
+    min-height: 80px;
+}
+
+.paragraph {
+    line-height: 27px;
+    padding-bottom:20px;
+    font-size: 14px;
+    min-height: 200px;
+    height: 100%;
+}
+
+.learn_more {
+    width:100%;
+    font-size: 14px;
+    margin-right: 0 auto;
+    display: none;
+    font-weight: bold;
+    animation: left_to_right 0.2s ease;
+    color: $text_onhover;
+}
+
+.arrow_right {
+    stroke-width: 5px;
+    right: 0px;
+    width:35px;
+    height:auto;
+    position: relative;
+    transition: right 0.2s ease-out;
+    fill:transparent;
+    stroke: $primary-color;
+}
+
+.wrapper:hover{
+    .arrow_right{
+    right:-20px;
+    }
+
+    .learn_more {
+        display: inline;
+    }
+}
+
+@keyframes left_to_right {
+    from {
+      margin-left: -10%;
+    }
+    to {
+      margin-left: 0;
+    }
+}
