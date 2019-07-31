@@ -22,7 +22,7 @@ body {
 }
 
 .card {
-    padding: 40px 30px;
+    padding: 10px 50px;
     margin: 10px;
     border-radius: 1px;
     background-size: 200% 200%;
@@ -55,7 +55,10 @@ body {
 }
 
 .title {
-    min-height: 80px;
+    min-height: 60px;
+    font-size: 25px;
+    font-weight: 100;
+    word-wrap: break-word;
 }
 
 .paragraph {
